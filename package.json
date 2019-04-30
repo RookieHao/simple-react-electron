@@ -1,0 +1,152 @@
+{
+  "name": "new_mypdman",
+  "version": "1.0.0",
+  "description": "miko_desk_application",
+  "main": "dist/index.js",
+  "homepage": "https://github.com/RookieHao/simple-react-electron.git",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "electron": "electron ./main",
+    "start": "node scripts/start.js",
+    "build:win": "node scripts/build.js --win",
+    "build:linux": "node scripts/build.js --linux",
+    "build:mac": "node scripts/build.js --mac",
+    "build:all": "node scripts/build.js --all"
+  },
+  "keywords": [
+    "miko",
+    "electron",
+    "react",
+    "antd",
+    "dva"
+  ],
+  "author": "miko",
+  "license": "ISC",
+  "dependencies": {
+    "@antv/g6": "^2.2.6",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/runtime": "^7.3.4",
+    "antd": "^3.15.0",
+    "axios": "^0.18.0",
+    "dva": "^2.4.1",
+    "dva-loading": "^2.0.6",
+    "history": "^4.7.2",
+    "lodash": "^4.17.11",
+    "officegen": "^0.4.7",
+    "pdfkit": "^0.9.0",
+    "prop-types": "^15.7.1",
+    "react": "^16.8.4",
+    "react-ace": "^6.4.0",
+    "react-dom": "^16.8.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "antd-pro-merge-less": "^1.0.0",
+    "antd-theme-webpack-plugin": "^1.2.0",
+    "autoprefixer": "^9.4.10",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-import": "^1.11.0",
+    "cache-loader": "^2.0.1",
+    "chalk": "^2.4.2",
+    "check-prettier": "^1.0.1",
+    "clean-webpack-plugin": "^2.0.1",
+    "copy-webpack-plugin": "^5.0.1",
+    "cross-env": "^5.2.0",
+    "cross-port-killer": "^1.0.1",
+    "css-loader": "^2.1.1",
+    "electron": "^4.0.8",
+    "electron-builder": "^20.39.0",
+    "electron-devtools-installer": "^2.2.4",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-compat": "^2.6.3",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-markdown": "^1.0.0",
+    "eslint-plugin-react": "^7.12.4",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "imports-loader": "^0.8.0",
+    "json-loader": "^0.5.7",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^8.1.1",
+    "mini-css-extract-plugin": "^0.5.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "react-dev-utils": "^8.0.0",
+    "script-ext-html-webpack-plugin": "^2.1.3",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.2",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.29.1",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1",
+    "xml-loader": "^1.2.1"
+  },
+  "build": {
+    "appId": "Y2hlbmhhb2xvdmVtaWtv",
+    "productName": "豪哥很棒",
+    "artifactName": "${name}-${platform}_v${version}.${ext}",
+    "directories": {
+      "buildResources": "dist",
+      "output": "electron_build"
+    },
+    "files": [
+      "dist/"
+    ],
+    "npmRebuild": false,
+    "asar": true,
+    "asarUnpack": [
+      "dist/jar/"
+    ],
+    "dmg": {
+      "icon": "dist/icon.icns",
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "win": {
+      "icon": "dist/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "linux": {
+      "icon": "dist/256x256.png",
+      "target": [
+        "zip",
+        "deb",
+        "AppImage"
+      ]
+    }
+  }
+}
