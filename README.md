@@ -1,7 +1,7 @@
 # Introduction
 
 ```
-  一个简单的react结合electron的项目模板。
+react结合electron的项目模板。
 ```
 
 # starting
